@@ -1,16 +1,15 @@
 
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="Black Technologies Ltd. — A new vision of technology, innovation and the future.">
 
-<meta name="description" content="Black Technologies Ltd. - Technology, Innovation and Future.">
-
-<title>Black Technologies Ltd. | Official Website</title>
+<title>Black Technologies Ltd. | Coming Soon</title>
 
 <style>
-
 * {
     margin: 0;
     padding: 0;
@@ -19,501 +18,423 @@
 }
 
 body {
-    background: #050505;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
+    background: #080808;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
 }
 
-/* NAVBAR */
+:root {
+    --gold: #d6b46a;
+    --dark: #080808;
+    --card: #141414;
+}
 
 header {
     width: 100%;
-    padding: 22px 7%;
+    padding: 20px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(5,5,5,0.96);
-    border-bottom: 1px solid #242424;
+    background: rgba(8,8,8,.95);
+    border-bottom: 1px solid #292929;
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
 .logo {
+    color: var(--gold);
     font-size: 21px;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
-.logo span {
-    color: #d4af37;
+nav {
+    display: flex;
+    gap: 25px;
 }
 
 nav a {
     color: #ddd;
     text-decoration: none;
-    margin-left: 22px;
     font-size: 13px;
-    transition: 0.3s;
+    transition: .3s;
 }
 
 nav a:hover {
-    color: #d4af37;
+    color: var(--gold);
 }
 
-/* HERO */
-
 .hero {
-    min-height: 88vh;
+    min-height: 90vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
     background:
-    radial-gradient(ellipse at center, #252016 0%, #101010 40%, #050505 75%);
+    radial-gradient(ellipse at center, #292015 0%, #111 42%, #080808 75%);
 }
 
-.hero small {
-    color: #d4af37;
+.hero-content {
+    max-width: 850px;
+}
+
+.tag {
+    color: var(--gold);
     letter-spacing: 5px;
-    margin-bottom: 25px;
+    font-size: 12px;
+    margin-bottom: 22px;
 }
 
 .hero h1 {
-    font-size: clamp(36px, 7vw, 75px);
+    font-size: clamp(38px, 7vw, 76px);
     line-height: 1.15;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
+    letter-spacing: 2px;
 }
 
 .hero h1 span {
-    color: #d4af37;
+    color: var(--gold);
 }
 
 .hero p {
-    color: #aaa;
-    font-size: 17px;
-    line-height: 1.9;
+    color: #bbb;
+    font-size: 16px;
     max-width: 650px;
-}
-
-.hero-button {
-    display: inline-block;
-    margin-top: 35px;
-    padding: 15px 35px;
-    border: 1px solid #d4af37;
-    color: #d4af37;
-    text-decoration: none;
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
-
-.hero-button:hover {
-    background: #d4af37;
-    color: #000;
+    margin: auto;
 }
 
 .coming {
-    margin-top: 25px;
-    color: #888;
-    letter-spacing: 5px;
-    font-size: 12px;
+    display: inline-block;
+    margin-top: 35px;
+    padding: 13px 32px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    letter-spacing: 3px;
+    font-size: 13px;
 }
 
-/* GENERAL SECTION */
-
-.section {
-    padding: 85px 7%;
-    text-align: center;
+section {
+    padding: 90px 8%;
 }
 
 .section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    color: var(--gold);
     font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.section-title span {
-    color: #d4af37;
-}
-
-.section-subtitle {
-    color: #888;
-    margin-bottom: 45px;
-    line-height: 1.8;
-}
-
-/* PRODUCTS */
-
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.product-card {
-    background: linear-gradient(145deg, #171717, #090909);
-    border: 1px solid #292929;
-    border-radius: 12px;
-    padding: 30px 20px;
-    transition: 0.3s;
-}
-
-.product-card:hover {
-    transform: translateY(-7px);
-    border-color: #d4af37;
-}
-
-.product-image {
-    height: 170px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    background: #101010;
-    border-radius: 8px;
-    color: #d4af37;
-    font-size: 65px;
-}
-
-.product-card h3 {
-    font-size: 22px;
     margin-bottom: 12px;
 }
 
-.product-card p {
+.section-title p {
     color: #999;
     font-size: 14px;
-    line-height: 1.8;
 }
 
-.product-status {
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: var(--card);
+    border: 1px solid #292929;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+}
+
+.product-icon {
+    width: 95px;
+    height: 115px;
+    margin: 0 auto 25px;
+    border: 2px solid var(--gold);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: var(--gold);
+    background: linear-gradient(145deg, #242018, #090909);
+}
+
+.product-card h3 {
+    color: var(--gold);
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.status {
     display: inline-block;
+    color: var(--gold);
+    border: 1px solid #806b40;
+    padding: 6px 16px;
     margin-top: 20px;
-    padding: 9px 18px;
-    border: 1px solid #d4af37;
-    color: #d4af37;
     font-size: 11px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
-
-/* VISION */
 
 .vision {
     background: #101010;
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222;
+    text-align: center;
 }
 
-.vision p,
-.about p {
-    max-width: 750px;
+.vision-text {
+    max-width: 800px;
     margin: auto;
-    color: #aaa;
-    line-height: 2;
+    color: #bbb;
     font-size: 16px;
 }
 
-/* UPCOMING */
+.vision-text strong {
+    color: var(--gold);
+}
 
 .upcoming {
-    padding: 90px 20px;
     text-align: center;
-    background: linear-gradient(120deg, #17130b, #050505);
+    background: linear-gradient(135deg, #17130c, #080808);
 }
 
 .upcoming h2 {
     font-size: 35px;
-    margin-bottom: 20px;
-}
-
-.upcoming h2 span {
-    color: #d4af37;
+    color: var(--gold);
+    margin-bottom: 15px;
 }
 
 .upcoming p {
-    color: #aaa;
-    line-height: 1.8;
+    color: #bbb;
 }
-
-/* ABOUT */
 
 .about {
-    background: #0b0b0b;
+    text-align: center;
 }
 
-/* CONTACT */
+.about-content {
+    max-width: 800px;
+    margin: auto;
+    color: #aaa;
+}
+
+.about-content h3 {
+    color: var(--gold);
+    font-size: 24px;
+    margin-bottom: 18px;
+}
 
 .contact {
-    background: #101010;
+    background: #111;
+    text-align: center;
 }
 
 .contact p {
     color: #aaa;
-    line-height: 2;
+    margin: 10px 0;
 }
-
-/* FOOTER */
 
 footer {
     padding: 35px 15px;
     text-align: center;
+    border-top: 1px solid #292929;
+    background: #050505;
+}
+
+footer h3 {
+    color: var(--gold);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+footer p {
     color: #777;
-    border-top: 1px solid #242424;
-    font-size: 13px;
-    line-height: 2;
+    font-size: 12px;
 }
 
-footer span {
-    color: #d4af37;
-}
-
-/* MOBILE */
-
-@media(max-width: 700px) {
-
+@media(max-width: 750px) {
     header {
+        padding: 18px 5%;
         flex-direction: column;
-        gap: 18px;
-        padding: 20px 10px;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     nav a {
-        margin: 0 8px;
         font-size: 12px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 65px 6%;
     }
 
     .hero {
         min-height: 75vh;
     }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    .section {
-        padding: 65px 18px;
-    }
-
-    .section-title {
-        font-size: 27px;
-    }
-
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-
 <header>
-
-    <div class="logo">
-        BLACK <span>TECHNOLOGIES</span>
-    </div>
+    <div class="logo">BLACK TECHNOLOGIES</div>
 
     <nav>
-        <a href="#home">HOME</a>
-        <a href="#products">PRODUCTS</a>
-        <a href="#about">ABOUT</a>
-        <a href="#contact">CONTACT</a>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#vision">Vision</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
     </nav>
-
 </header>
 
-
-<!-- HOMEPAGE -->
+<main>
 
 <section class="hero" id="home">
+    <div class="hero-content">
+        <div class="tag">INNOVATION • TECHNOLOGY • FUTURE</div>
 
-    <small>WELCOME TO THE FUTURE</small>
+        <h1>
+            THE FUTURE<br>
+            OF <span>TECHNOLOGY</span>
+        </h1>
 
-    <h1>
-        THE FUTURE OF
-        <span>TECHNOLOGY</span>
-    </h1>
+        <p>
+            A new vision of technology is coming.
+            Discover innovation, creativity and
+            the possibilities of tomorrow.
+        </p>
 
-    <p>
-        প্রযুক্তির নতুন সম্ভাবনা, আধুনিক উদ্ভাবন
-        এবং ভবিষ্যতের নতুন অধ্যায় নিয়ে আসছে
-        Black Technologies Ltd.
-    </p>
-
-    <a href="#products" class="hero-button">
-        EXPLORE OUR WORLD
-    </a>
-
-    <div class="coming">
-        SOMETHING BIG IS COMING
+        <div class="coming">COMING SOON</div>
     </div>
-
 </section>
 
-
-<!-- PRODUCTS -->
-
-<section class="section" id="products">
-
-    <h2 class="section-title">
-        OUR <span>PRODUCTS</span>
-    </h2>
-
-    <p class="section-subtitle">
-        Discover our upcoming technology ecosystem.
-    </p>
+<section id="products">
+    <div class="section-title">
+        <h2>OUR PRODUCTS</h2>
+        <p>Introducing a new generation of technology.</p>
+    </div>
 
     <div class="products">
 
         <div class="product-card">
-
-            <div class="product-image">B</div>
-
+            <div class="product-icon">B</div>
             <h3>Black Phone</h3>
-
             <p>
-                A new vision of smartphones.
-                Modern design and future technology.
+                A new smartphone vision focused on
+                modern design and innovation.
             </p>
-
-            <div class="product-status">
-                COMING SOON
-            </div>
-
+            <div class="status">COMING SOON</div>
         </div>
 
-
         <div class="product-card">
-
-            <div class="product-image">P</div>
-
+            <div class="product-icon">P</div>
             <h3>Black Pad</h3>
-
             <p>
-                Discover a new generation
-                of tablet technology.
+                Exploring a smarter and more
+                creative tablet experience.
             </p>
-
-            <div class="product-status">
-                COMING SOON
-            </div>
-
+            <div class="status">COMING SOON</div>
         </div>
 
-
         <div class="product-card">
-
-            <div class="product-image">B</div>
-
+            <div class="product-icon">B</div>
             <h3>Black Book</h3>
-
             <p>
-                Explore the future of
-                modern computing.
+                A new concept for modern computing
+                and productivity.
             </p>
-
-            <div class="product-status">
-                COMING SOON
-            </div>
-
+            <div class="status">COMING SOON</div>
         </div>
 
     </div>
-
 </section>
 
+<section class="vision" id="vision">
+    <div class="section-title">
+        <h2>OUR VISION</h2>
+        <p>Building possibilities for tomorrow.</p>
+    </div>
 
-<!-- VISION -->
-
-<section class="section vision">
-
-    <h2 class="section-title">
-        OUR <span>VISION</span>
-    </h2>
-
-    <p>
-        আমাদের লক্ষ্য আধুনিক প্রযুক্তির মাধ্যমে
-        নতুন সম্ভাবনা তৈরি করা এবং ভবিষ্যতের
-        প্রযুক্তি জগতে নতুন কিছু উপহার দেওয়া।
-
-        উদ্ভাবন, সৃজনশীলতা এবং উন্নত প্রযুক্তির
-        সমন্বয়ে আমরা তৈরি করতে চাই নতুন এক
-        প্রযুক্তির যাত্রা।
-    </p>
-
+    <div class="vision-text">
+        <p>
+            Our vision is to explore new possibilities
+            in the world of technology. We believe in
+            <strong>innovation, creativity and progress</strong>.
+            Our goal is to develop ideas that can make
+            technology more accessible and meaningful
+            for the future.
+        </p>
+    </div>
 </section>
-
-
-<!-- UPCOMING -->
 
 <section class="upcoming">
-
-    <h2>
-        A NEW ERA IS <span>COMING</span>
-    </h2>
-
+    <h2>A NEW CHAPTER BEGINS</h2>
     <p>
-        Stay Connected.
-        Something Big Is Coming Soon.
-        <br>
-        Follow Our Journey.
+        Something exciting is in development.
+        Stay connected for upcoming announcements.
     </p>
-
+    <div class="coming">BIG UPDATES COMING SOON</div>
 </section>
 
+<section class="about" id="about">
+    <div class="section-title">
+        <h2>ABOUT US</h2>
+        <p>Discover Black Technologies Ltd.</p>
+    </div>
 
-<!-- ABOUT -->
-
-<section class="section about" id="about">
-
-    <h2 class="section-title">
-        ABOUT <span>US</span>
-    </h2>
-
-    <p>
-        Black Technologies Ltd. is an emerging
-        technology brand focused on innovation,
-        modern design and future possibilities.
-
-        Our journey is just beginning.
-        We are preparing for a new chapter
-        in the world of technology.
-    </p>
-
+    <div class="about-content">
+        <h3>Black Technologies Ltd.</h3>
+        <p>
+            Black Technologies Ltd. is an upcoming
+            technology brand concept focused on
+            exploring innovative ideas, modern
+            technology and future possibilities.
+            This is the beginning of a new journey.
+        </p>
+    </div>
 </section>
 
+<section class="contact" id="contact">
+    <div class="section-title">
+        <h2>STAY CONNECTED</h2>
+        <p>More information and announcements coming soon.</p>
+    </div>
 
-<!-- CONTACT -->
-
-<section class="section contact" id="contact">
-
-    <h2 class="section-title">
-        CONTACT <span>US</span>
-    </h2>
-
-    <p>
-        Stay Connected With Black Technologies Ltd.
-        <br>
-        Official Website | Coming Soon
-    </p>
-
+    <p>Black Technologies Ltd.</p>
+    <p>Official Website — Coming Soon</p>
 </section>
 
-
-<!-- FOOTER -->
+</main>
 
 <footer>
-
-    © 2026 Black Technologies Ltd.
-    All Rights Reserved.
-
-    <br>
-
-    <span>TECHNOLOGY • INNOVATION • FUTURE</span>
-
+    <h3>BLACK TECHNOLOGIES LTD.</h3>
+    <p>Innovation • Technology • Future</p>
+    <p>© 2026 Black Technologies Ltd. All Rights Reserved.</p>
 </footer>
 
 </body>
